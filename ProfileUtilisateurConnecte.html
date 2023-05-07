@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profil utilisateur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="my-5">Profil utilisateur</h1>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Informations de l'utilisateur</h5>
+          <p class="card-text"><strong>Nom d'utilisateur :</strong> {${user}}</p>
+          <p class="card-text"><strong>Adresse e-mail :</strong> {${email}}</p>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Historique des commandes</h5>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Produit</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for commande in historique_commandes %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{commande.date}}</td>
+                <td>{{commande.produit}}</td>
+                <td>{{commande.quantite}}</td>
+                <td>{{commande.prix}} €</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+  margin:0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Barre de navigation */
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+nav h1{
+  font-size: 20px;
+  color: #e47317;
+}
+nav .onglets{
+  display: flex;
+  flex-wrap:wrap;
+  color: #e47317;
+}
+nav .onglets p{
+  font-size: 17px;
+  margin-right: 10px;
+  cursor:pointer;
+}
+a{
+  text-decoration:none;
+  vertical-align: bottom;
+  margin: 4px 4px;
+  padding: 14px;
+  color: #e47317;
+  font-weight: bold;
+}
+nav .onglets input{
+  margin: 8px 20px;
+  padding: 15px;
+  border-radius: 30px;
+  border:none;
+  background-color: #f2f2f2;
+  outline:none;
+}
+/* Fin de la barre de navigation */
+
+/* Header */
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+header h1{
+  font-size: 50px;
+  max-width: 500px;
+  text-align:center;
+  color: #000000;
+}
+header h1 span{
+  color: #e47317;
+}
+header button{
+  padding: 15px 20px;
+  font-size: 20px;
+  border:none;
+  border-radius: 5px;
+  outline:none;
+  cursor:pointer;
+}
+/* Fin du header */
+
+/* Section principale */
+
+.main{
+  margin: 20px;
+  margin-top: 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+/* Toutes les cartes */
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  margin-left: 200px;
+}
+.cards .card{
+  margin-right: 20px;
+  cursor:pointer;
+}
+.cards .card img{
+  width: 350px;
+  height: 350px;
+}
+.cards .card .card-header{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+.cards .card .card-body p{
+  margin-top: -10px;
+}
+/* Fin de toutes les cartes */
+
+/* Video de présentation */
+.main .video{
+  margin-top: 80px;
+  width: 90%;
+}
+.main .video iframe{
+  border:none;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+}
+/* Fin de la vidéo de présentation */
+/* Fin de la section principale */
+
+/* Pied de page */
+footer {
+  margin-top: 100px;
+  background-color: #000;
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+footer .social-media{
+  display: flex;
+}
+footer .social-media p{
+  margin-right: 15px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 5px;
+  text-align:center;
+  width: 20px;
+  cursor:pointer;
+}
+/* Fin du pied de page */
+
+@media screen and (max-width: 640px){
+  nav .onglets .link, nav h1{
+    display:none;
+  }
+  .cards .card img{
+    width: 300px;
+  }
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>site e-commerce</title>
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<body>
+  <!-- Barre de navigation -->
+  <nav clqss="navbar navbar-expand-lg navbar-dark">
+    <h1>EcomE</h1>
+    <div class="onglets">
+      <a href="login.html">Login</a>
+      <a href="inscription.html">S'inscrire</a>
+      <a href="Contact.html">Contactez-nous</a>
+      <a href="Apropos.html">A propos</a>
+      <form>
+        <input type="search" placeholder="Rechercher">
+      </form>
+
+      <p><i class="far fa-heart"></i></p>
+      <p><i class="fas fa-shopping-cart"></i></p>
+    </div>
+  </nav>
+  <!-- Fin de la barre de navigation -->
+
+  <!-- Header -->
+   <header>
+     <h1>C'est votre <span>boutique</span>, votre <span>chez-vous</span>.</h1>
+     <button>Naviguer <i class="fas fa-paper-plane"></i></button>
+   </header>
+  <!-- Fin du header -->
+
+  <!-- Section principale -->
+  <section class="main">
+
+    <!-- Toutes les cartes -->
+
+    <div class="cards">
+
+      <div class="card" >
+
+        <img src="https://static.nike.com/a/images/f_auto/q_auto:eco/t_PDP_864_v1/0697fd03-09fd-4b3b-be0b-11b009c671d9/short-en-molleton-sportswear-pour-z5Kgjx.jpg">
+
+        <div class="card-header" >
+          <h4 class="title"><a href="commandeShortNike.html">Short Nike</a></h4>
+          <h4 class="price">69$</h4>
+        </div>
+        <div class="card-body">
+          <p>Short moulant pour homme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ca23c14676ca4181b378ad5e003d51e0_9366/adidas_SPRT_Shark_Woven_Track_Jacket_Green_H06747_21_model.jpg">
+        <div class="card-header">
+          <h4 class="title">Adidas Shark Woven Green</h4>
+          <h4 class="price">69$</h4>
+        </div>
+        <div class="card-body">
+          <p>Une jacket stylée pour homme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/92936a3ef27242a18e3eafb601195276_9366/Y-3_Workwear_Cargo_Pants_Black_H63074_21_model.jpg">
+        <div class="card-header">
+          <h4 class="title">Workwear Cargo Pants</h4>
+          <h4 class="price">79$</h4>
+        </div>
+        <div class="card-body">
+          <p>Cargo pants noir pour homme pour homme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d4700e1e6d444c1f8e83ae0000e3bf87_9366/adidas_x_Marimekko_Hoodie_Yellow_HC4186_21_model.jpg">
+        <div class="card-header">
+          <h4 class="title">Adidas X Marimekko Hoodie </h4>
+          <h4 class="price">89$</h4>
+        </div>
+        <div class="card-body">
+          <p>Perl Citrine hoodie pour femme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/90cd6e190c954ede9b9daf4c00edaec7_9366/Messi_Training_Top_Black_HR4353_21_model.jpg">
+        <div class="card-header">
+          <h4 class="title">Messi Training Top</h4>
+          <h4 class="price">79$</h4>
+        </div>
+        <div class="card-body">
+          <p>Des paires de chaussures stylées pour femme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a0cd3e720ade43b79045af9c00f9d1af_9366/Oztral_Shoes_Black_HP6565_01_standard.jpg">
+        <div class="card-header">
+          <h4 class="title">Oztral Shoes</h4>
+          <h4 class="price">99$</h4>
+        </div>
+        <div class="card-body">
+          <p>Pair de chaussure oztral stylée pour homme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d4e1fe6ed98b4327ba31af5000247b71_9366/FC_Bayern_Icon_Jersey_Gold_HT8833_21_model.jpg">
+        <div class="card-header">
+          <h4 class="title">Fc Bayern Icon Jersey</h4>
+          <h4 class="price">109$</h4>
+        </div>
+        <div class="card-body">
+          <p>Bayern jersey à manches courtes pour Homme</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/84ce587a47cb490d8f37af320131caa8_9366/Satin_Adibreak_Pants_Beige_IC5218_21_model.jpg">
+        <div class="card-header">
+          <h4 class="title">Satin Adibreak Pants</h4>
+          <h4 class="price">199$</h4>
+        </div>
+        <div class="card-body">
+          <p>Wonder White pantalon pour femme</p>
+        </div>
+      </div>
+
+
+     </div>
+    <!-- Fin de toutes les cartes -->
+
+    <!-- Video de presentation -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/2COSkxxOtXY" allowfullscreen></iframe>
+    </div>
+    <!-- Fin de la video de presentation -->
+  </section>
+  <!-- Fin de la section principale -->
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; Contactez-nous au 07 17 61 88 02</p>
+    <div class="social-media">
+      <p><i class="fab fa-facebook-f"></i></p>
+      <p><i class="fab fa-twitter"></i></p>
+      <p><i class="fab fa-instagram"></i></p>
+      <p><i class="fab fa-linkedin-in"></i></p>
+    </div>
+  </footer>
+  <!-- Fin du pied de page -->
+</body>
+</html>

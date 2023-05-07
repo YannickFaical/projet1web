@@ -1,0 +1,53 @@
+/* Style pour le conteneur de formulaire */
+.order-form {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour les champs de formulaire */
+.order-form label,
+.order-form input,
+.order-form select {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.order-form label {
+  font-weight: bold;
+}
+
+.order-form input,
+.order-form select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Style pour le bouton de soumission */
+.order-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+/* Style pour l'affichage du total */
+.order-form #total {
+  display: block;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
